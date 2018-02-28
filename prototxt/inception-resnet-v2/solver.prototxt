@@ -1,0 +1,26 @@
+train_net: "examples/year/inception-resnet-v2/trainnet.prototxt"
+test_net: "examples/year/inception-resnet-v2/valnet.prototxt"
+#test_iter: 500
+#test_interval: 100000000
+#test_initialization: false
+
+#net: "examples/year/inception-resnet-v2/trainnet.prototxt"
+test_iter: 139
+test_interval: 10000
+test_initialization: false
+
+base_lr: 0.012
+lr_policy: "step"
+type: "RMSProp"
+rms_decay: 0.9
+delta: 0.9
+gamma: 0.9
+stepsize: 6663
+max_iter: 1066080
+weight_decay: 0.0004
+clip_gradients: 80
+display: 100
+
+snapshot: 10000
+snapshot_prefix: "examples/year/snapshot/year700w_inception_resnet_v2_crop128_scale"
+solver_mode: GPU
