@@ -1,0 +1,26 @@
+train_net: "examples/year/DenseNet/densenet_121_train.prototxt"
+test_net: "examples/year/DenseNet/densenet_121_test.prototxt"
+#test_iter: 500
+#test_interval: 100000000
+#test_initialization: false
+
+#net: "examples/year/DenseNet/trainnet.prototxt"
+test_iter: 151
+test_interval: 2000
+test_initialization: false
+
+base_lr: 0.072
+lr_policy: "step"
+type: "RMSProp"
+rms_decay: 0.9
+delta: 0.9
+gamma: 0.94
+stepsize: 6663
+max_iter: 1066080
+weight_decay: 0.0004
+clip_gradients: 80
+display: 100
+
+snapshot: 2000
+snapshot_prefix: "examples/year/snapshot/DenseNet_year120w"
+solver_mode: GPU
